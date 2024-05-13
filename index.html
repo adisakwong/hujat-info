@@ -110,10 +110,10 @@
         }
 
         let config = {
-          fps: 40,
+          fps: 60,
           qrbox: {width: 250, height: 250},
           rememberLastUsedCamera: true,
-          // Only support camera scan type.  // fps: 10, {width: 250, height: 250}
+          // Only support camera scan type.  // default fps: 10, {width: 250, height: 250}
           supportedScanTypes: [Html5QrcodeScanType.SCAN_TYPE_CAMERA]
         };
         let html5QrcodeScanner = new Html5QrcodeScanner(
