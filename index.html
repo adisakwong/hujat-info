@@ -91,12 +91,18 @@
         //for scan function
         function onScanSuccess(qrCodeMessage) {
             document.getElementById('result1').innerHTML = '<span class="result">'+qrCodeMessage+'</span>';
+
+            if(qrCodeMessage.length==13){
+                window.location.replace("http://209.15.98.146/hujat-info/index.php?p=" + qrCodeMessage + "&inp=scan");//redirect  
+            }else{
+            
             strArray = qrCodeMessage.split("=");
             //document.getElementById('result').value = qrCodeMessage;
             document.getElementById('result2').value = strArray[1];
             //window.location.replace("http://209.15.98.146/apps/hujat-info/index.php?p=" + strArray[1]);//redirect
             window.location.replace("http://209.15.98.146/apps/hujat-info/index.php?p=" + strArray[1] + "&inp=scan");//redirect
-           
+            
+            }
         }
 
         function onScanError(errorMessage) {
